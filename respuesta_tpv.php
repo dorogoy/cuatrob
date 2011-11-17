@@ -6,6 +6,11 @@ include(dirname(__FILE__).'/cuatrob.php');
 include(dirname(__FILE__).'/class_cuatrob.php');
 
 if (cuatrob::validaIpPasarela() == false) {
+	/**
+	* Ejemplo de llamada a la función mail() para chivarse de la IP que ha intentado acceder a este fichero
+	* Modificar para@email.com y desde@email.com
+	**/
+	// 	mail('para@email.com', 'Error de IP en modulo 4B', $_SERVER['REMOTE_ADDR'], null, '-fdesde@email.com');
 	die('Intento de acceso no autorizado. Su IP ha sido registrada.');
 }
 
